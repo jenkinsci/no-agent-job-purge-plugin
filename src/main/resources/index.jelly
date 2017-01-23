@@ -3,5 +3,5 @@
   This view is used to render the installed plugins page.
 -->
 <div>
-  This plugin is a sample to explain how to write a Jenkins plugin.
+  A Jenkins plugin to purge jobs from the build queue if there is no slave available to take it.
 </div>
