@@ -2,8 +2,6 @@ package org.jenkinsci.plugins.noslavejobpurge;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
-
 import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.StaplerResponse;
 
@@ -46,21 +44,18 @@ public class PurgeNoSlaveJobs implements RootAction
    @Override
    public String getDisplayName()
    {
-      // TODO:pbuckley Finalise me
-      return "Purge Jobs with no Slave";
+      return "Purge Jobs with offline Slaves";
    }
 
    @Override
    public String getIconFileName()
    {
-      // TODO:pbuckley Finalise me
       return "/images/32x32/gear2.png";
    }
 
    @Override
    public String getUrlName()
    {
-      // TODO:pbuckley Finalise me
       return "/endofflineslavejobs";
    }
 
