@@ -1,11 +1,11 @@
 <?jelly escape-by-default='false'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <j:getStatic var="permission" className="jenkins.model.Jenkins" field="ADMINISTER"/>
-  <l:layout norefresh="true" permission="${permission}" title="Purge Jobs with offline Slaves">
+  <l:layout norefresh="true" permission="${permission}" title="Purge Jobs with offline Agents">
     <l:main-panel>
-      <h1>Purge Jobs with offline Slaves</h1>
+      <h1>Purge Jobs with offline Agents</h1>
       <br/>
-      <f:form name="endOfflineSlaveJobs" action="endOfflineSlaveJobs" method="post">
+      <f:form name="endOfflineAgentJobs" action="endOfflineAgentJobs" method="post">
         <f:block>
           <input type="submit" value="Purge" />
         </f:block>

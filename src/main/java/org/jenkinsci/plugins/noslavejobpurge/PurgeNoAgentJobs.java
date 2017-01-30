@@ -14,10 +14,10 @@ import hudson.model.queue.CauseOfBlockage.BecauseNodeIsOffline;
 import jenkins.model.Jenkins;
 
 @Extension
-public class PurgeNoSlaveJobs implements RootAction
+public class PurgeNoAgentJobs implements RootAction
 {
 
-   public void doEndOfflineSlaveJobs(final StaplerRequest request, final StaplerResponse response)
+   public void doEndOfflineAgentJobs(final StaplerRequest request, final StaplerResponse response)
    {
       Queue queue = Jenkins.getInstance().getQueue();
 
@@ -26,7 +26,6 @@ public class PurgeNoSlaveJobs implements RootAction
          if (job.getCauseOfBlockage() instanceof BecauseNodeIsOffline
                || job.getCauseOfBlockage() instanceof BecauseLabelIsOffline)
          {
-            System.out.println("Found offline Node for: " + job.getDisplayName());
             queue.cancel(job);
          }
       }
@@ -44,7 +43,7 @@ public class PurgeNoSlaveJobs implements RootAction
    @Override
    public String getDisplayName()
    {
-      return "Purge Jobs with offline Slaves";
+      return "Purge Jobs with offline Agents";
    }
 
    @Override
@@ -56,7 +55,7 @@ public class PurgeNoSlaveJobs implements RootAction
    @Override
    public String getUrlName()
    {
-      return "/endofflineslavejobs";
+      return "/endofflineagentjobs";
    }
 
 }

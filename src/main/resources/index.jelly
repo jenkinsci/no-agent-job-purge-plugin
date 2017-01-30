@@ -3,5 +3,5 @@
   This view is used to render the installed plugins page.
 -->
 <div>
-  A Jenkins plugin to purge jobs from the build queue if there is no slave available to take it.
+  A Jenkins plugin to purge jobs from the build queue if there is no agent available to take it.
 </div>
