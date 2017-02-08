@@ -30,7 +30,7 @@
 
   <name>No Agent Job Purge</name>
   <description>A Jenkins plugin to purge jobs from the build queue if there is no agent available to take it.</description>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/TODO+Plugin</url>
+  <url>https://wiki.jenkins-ci.org/display/JENKINS/No+Agent+Job+Purge+Plugin</url>
 
   <!-- The default licence for Jenkins OSS Plugins is MIT. Substitute for the applicable one if needed. -->
 
