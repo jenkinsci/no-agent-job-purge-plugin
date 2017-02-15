@@ -18,9 +18,9 @@ public class PurgeNoAgentJobs implements RootAction {
 
 	public void doEndOfflineAgentJobs(final StaplerRequest request, final StaplerResponse response) {
 
-		
-		if (Jenkins.getInstance() != null) {
-			Queue queue = Jenkins.getInstance().getQueue();
+		Jenkins j;
+		if ((j = Jenkins.getInstance()) != null) {
+			Queue queue = j.getQueue();
 			if (queue != null) {
 				for (Item job : queue.getItems()) {
 					if (job.getCauseOfBlockage() instanceof BecauseNodeIsOffline
