@@ -21,14 +21,16 @@ public class PurgeNoAgentJobs implements RootAction
    {
       Queue queue = Jenkins.getInstance().getQueue();
 
-      for (Item job : queue.getItems())
-      {
-         if (job.getCauseOfBlockage() instanceof BecauseNodeIsOffline
-               || job.getCauseOfBlockage() instanceof BecauseLabelIsOffline)
-         {
-            queue.cancel(job);
-         }
-      }
+      if(queue != null){
+      	for (Item job : queue.getItems())
+      	{
+        	if (job.getCauseOfBlockage() instanceof BecauseNodeIsOffline
+               	|| job.getCauseOfBlockage() instanceof BecauseLabelIsOffline)
+         	{
+           		queue.cancel(job);
+         	}
+      	 }
+	}
 
       try
       {
