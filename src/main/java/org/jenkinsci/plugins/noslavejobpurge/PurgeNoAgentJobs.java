@@ -40,7 +40,7 @@ public class PurgeNoAgentJobs implements RootAction {
 
 	@Override
 	public String getDisplayName() {
-		return "Purge Jobs with offline Agents";
+      return "Purge Jobs with Offline Agents";
 	}
 
 	@Override
@@ -50,7 +50,6 @@ public class PurgeNoAgentJobs implements RootAction {
 
 	@Override
 	public String getUrlName() {
-		return "/endofflineagentjobs";
+      return "endOfflineAgentJobs";
 	}
-
 }
