@@ -45,7 +45,11 @@ public class PurgeNoAgentJobs implements RootAction {
 
 	@Override
 	public String getIconFileName() {
-		return "/images/32x32/gear2.png";
+		return "null";
+	}
+
+	public String getIconClassName() {
+		return "icon-gear";
 	}
 
 	@Override
