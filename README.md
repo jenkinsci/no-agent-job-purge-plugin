@@ -1,7 +1,7 @@
 # no-agent-job-purge-plugin
 A Jenkins plugin to purge jobs from the build queue if there is no agent available to take it.  
 
-After install the plugin, you can see the "Purge Jobs with Offline Agents" option in dashboard page Uder root actions.  
+After installing the plugin, you can see the "Purge Jobs with Offline Agents" option in dashboard page Uder root actions.  
 
 ![](Images/purgejobs.PNG)
 
